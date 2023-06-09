@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.875rem;
+  color: var(--color-gray-300);
+  background-color: var(--color-gray-900);
+  height: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.marketingMsg {
+  color: var(--color-white);
+  margin-right: auto;
+}
+
+.shoppingBagButton svg {
+  stroke-width: 1px;
+}
+
+.helpLink {
+  color: inherit;
+  text-decoration: none;
+  outline-offset: 2px;
+}
+
+/* Tablet */
+@media (max-width: 59.375rem) {
+  .wrapper {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+}

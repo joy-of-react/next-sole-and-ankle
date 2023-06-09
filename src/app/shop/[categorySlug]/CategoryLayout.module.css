@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  gap: 32px;
+  padding: 64px 32px;
+}
+
+.sidebarWrapper {
+  flex-basis: 15.5rem;
+}
+.childWrapper {
+  flex: 1;
+}
+
+/* Tablet */
+@media (max-width: 59.375rem) {
+  .sidebarWrapper {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+  .wrapper {
+    padding: 48px 16px;
+  }
+}

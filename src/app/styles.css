@@ -45,3 +45,39 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* GLOBAL STYLES */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: var(--font-family-primary),
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+html {
+  --color-white: hsl(0deg 0% 100%);
+  --color-primary: hsl(340deg 65% 47%);
+  --color-secondary: hsl(240deg 60% 63%);
+  --color-gray-100: hsl(185deg 5% 95%);
+  --color-gray-300: hsl(190deg 5% 80%);
+  --color-gray-500: hsl(196deg 4% 60%);
+  --color-gray-700: hsl(220deg 4% 40%);
+  --color-gray-900: hsl(220deg 3% 20%);
+  --color-backdrop: hsl(220deg 4% 40% / 0.8);
+}
+
+/* Remove default button styles */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}

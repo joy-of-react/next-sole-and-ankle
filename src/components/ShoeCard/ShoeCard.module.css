@@ -1,0 +1,62 @@
+.wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px 16px 4px 4px;
+  aspect-ratio: 400 / 275;
+  object-fit: cover;
+}
+
+.row {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.price {
+  color: var(--color);
+  text-decoration: var(--text-decoration);
+}
+
+.colorInfo {
+  color: var(--color-gray-700);
+}
+
+.salePrice {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.flag {
+  position: absolute;
+  top: 12px;
+  right: -4px;
+  background: red;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--color-white);
+  border-radius: 2px;
+}
+
+.flag.sale {
+  background-color: var(--color-primary);
+}
+.flag.new {
+  background-color: var(--color-secondary);
+}
