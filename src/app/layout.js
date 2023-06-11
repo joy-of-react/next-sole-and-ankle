@@ -1,24 +1,26 @@
 import React from 'react';
-import { Raleway } from 'next/font/google';
-// import { QUERIES } from '../../constants';
+import { Raleway, Redacted_Script } from 'next/font/google';
 
 import Header from '@/components/Header';
-// import ShoeIndex from '../ShoeIndex';
 
 import './styles.css';
 
 const primaryFont = Raleway({
-  weights: [500, 600, 800],
+  weight: ['500', '600', '800'],
+  subsets: ['latin'],
+});
+const loadingFont = Redacted_Script({
+  weight: ['400'],
   subsets: ['latin'],
 });
 
-const RootLayout = ({ children }) => {
+function RootLayout({ children }) {
   return (
     <html
       lang="en"
       style={{
-        '--font-family-primary':
-          primaryFont.style.fontFamily,
+        '--font-family-primary': primaryFont.style.fontFamily,
+        '--font-family-loading': loadingFont.style.fontFamily,
       }}
     >
       <body>
@@ -27,6 +29,6 @@ const RootLayout = ({ children }) => {
       </body>
     </html>
   );
-};
+}
 
 export default RootLayout;

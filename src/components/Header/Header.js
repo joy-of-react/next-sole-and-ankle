@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import {
-  Menu,
-  Search,
-  ShoppingBag,
-} from 'react-feather';
+import { Menu, Search, ShoppingBag } from 'react-feather';
 
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
@@ -24,47 +20,32 @@ const Header = () => {
         <nav className={styles.desktopNav}>
           <Link
             className={styles.navLink}
-            href="/shop"
+            href="/shop/bestsellers"
+            style={{
+              color: 'var(--color-secondary)',
+            }}
           >
             Shop
           </Link>
-          <Link
-            className={styles.navLink}
-            href="/community"
-          >
+          <Link className={styles.navLink} href="/community">
             Community
           </Link>
-          <Link
-            className={styles.navLink}
-            href="/contact"
-          >
+          <Link className={styles.navLink} href="/contact">
             Contact Us
           </Link>
         </nav>
         <div className={styles.mobileActions}>
-          <button
-            className={styles.shoppingBagButton}
-          >
+          <button className={styles.shoppingBagButton}>
             <ShoppingBag />
-            <VisuallyHidden>
-              Open cart
-            </VisuallyHidden>
+            <VisuallyHidden>Open cart</VisuallyHidden>
           </button>
           <button>
             <Search />
-            <VisuallyHidden>
-              Search
-            </VisuallyHidden>
+            <VisuallyHidden>Search</VisuallyHidden>
           </button>
-          <button
-            onClick={() =>
-              setShowMobileMenu(true)
-            }
-          >
+          <button onClick={() => setShowMobileMenu(true)}>
             <Menu />
-            <VisuallyHidden>
-              Open menu
-            </VisuallyHidden>
+            <VisuallyHidden>Open menu</VisuallyHidden>
           </button>
         </div>
         <div className={styles.filler} />

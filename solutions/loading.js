@@ -1,22 +1,9 @@
 import React from 'react';
 
-import ShoeCard from '../ShoeCard';
-import styles from './ShoeGrid.module.css';
+import ShoeGrid from '@/components/ShoeGrid';
 
-function ShoeGrid({ isPlaceholder, shoes }) {
-  const actualShoes = isPlaceholder ? FAKE_SHOES : shoes;
-
-  return (
-    <div className={styles.wrapper} aria-hidden={isPlaceholder}>
-      {actualShoes.map((shoe) => (
-        <ShoeCard
-          key={shoe.slug}
-          shoe={shoe}
-          isPlaceholder={isPlaceholder}
-        />
-      ))}
-    </div>
-  );
+async function LoadingCategoryPage() {
+  return <ShoeGrid isPlaceholder={true} shoes={FAKE_SHOES} />;
 }
 
 const FAKE_SHOES = [
@@ -25,7 +12,6 @@ const FAKE_SHOES = [
     name: 'Nike FakeShoe 1',
     price: 14500,
     numOfColors: 2,
-    releaseDate: Date.now() - 1000 * 60 * 60 * 1,
   },
   {
     slug: '002',
@@ -37,7 +23,6 @@ const FAKE_SHOES = [
     slug: '003',
     name: 'Nike Undefined',
     price: 16000,
-    salePrice: 14000,
     numOfColors: 1,
   },
   {
@@ -45,13 +30,11 @@ const FAKE_SHOES = [
     name: 'Another fake shoe!',
     price: 12345,
     numOfColors: 1,
-    releaseDate: Date.now() - 1000 * 60 * 60 * 1,
   },
   {
     slug: '005',
     name: 'Yep shoe',
     price: 12345,
-    salePrice: 1234,
     numOfColors: 1,
   },
   {
@@ -62,4 +45,4 @@ const FAKE_SHOES = [
   },
 ];
 
-export default ShoeGrid;
+export default LoadingCategoryPage;

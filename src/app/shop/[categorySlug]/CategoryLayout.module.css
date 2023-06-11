@@ -1,11 +1,15 @@
 .wrapper {
   display: flex;
-  flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
   padding: 64px 32px;
 }
 
+.childWrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
 .sidebarWrapper {
   flex-basis: 15.5rem;
 }

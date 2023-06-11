@@ -14,6 +14,7 @@ function CategorySidebar({ selectedCategory }) {
             return (
               <Link
                 href={`/shop/${slug}`}
+                key={slug}
                 style={{
                   color:
                     slug === selectedCategory

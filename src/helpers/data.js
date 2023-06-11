@@ -1,25 +1,14 @@
-export const getShoesForCategory = async (
-  category
-) => {
-  // This method simulates a database request.
-  // For realism, we'll wait about 2 seconds.
-  await delay(Math.random() * 2000 + 500);
-
-  if (!category) {
-    return SHOES;
-  }
+// Simulated database request
+export async function getShoesForCategory(category) {
+  // await delay(2000);
 
   return SHOES.filter((shoe) =>
-    shoe.categories.includes(
-      category.toLowerCase()
-    )
+    shoe.categories.includes(category.toLowerCase())
   );
-};
+}
 
 const delay = (ms) =>
-  new Promise((resolve) =>
-    setTimeout(resolve, ms)
-  );
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 const SHOES = [
   {
@@ -27,9 +16,8 @@ const SHOES = [
     name: 'Nike Air Force 1 ‘07',
     imageSrc: '/assets/af1.webp',
     price: 14500,
-    salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 120,
+    salePrice: 12000,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 120,
     numOfColors: 2,
     categories: [
       'basketball',
@@ -55,8 +43,7 @@ const SHOES = [
     imageSrc: '/assets/metcon-5.jpg',
     price: 16500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 2,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 2,
     numOfColors: 1,
     categories: ['running', 'bestsellers'],
   },
@@ -66,8 +53,7 @@ const SHOES = [
     imageSrc: '/assets/phantom.jpg',
     price: 16500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 4,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 4,
     numOfColors: 4,
     categories: ['training  ', 'running'],
   },
@@ -77,8 +63,7 @@ const SHOES = [
     imageSrc: '/assets/pegasus.jpg',
     price: 16500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 16,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 16,
     numOfColors: 1,
     categories: ['bestsellers', 'skateboarding'],
   },
@@ -88,14 +73,9 @@ const SHOES = [
     imageSrc: '/assets/joyride.jpg',
     price: 17000,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 40,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 40,
     numOfColors: 2,
-    categories: [
-      'running',
-      'basketball',
-      'bestsellers',
-    ],
+    categories: ['running', 'basketball', 'bestsellers'],
   },
   {
     slug: 'legend-academy',
@@ -103,8 +83,7 @@ const SHOES = [
     imageSrc: '/assets/legend-academy.jpg',
     price: 16500,
     salePrice: 12500,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 50,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 50,
     numOfColors: 8,
     categories: ['lifestyle', 'training'],
   },
@@ -114,14 +93,9 @@ const SHOES = [
     imageSrc: '/assets/react-infinity.jpg',
     price: 16000,
     salePrice: 14500,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 75,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 75,
     numOfColors: 1,
-    categories: [
-      'bestsellers',
-      'running',
-      'training',
-    ],
+    categories: ['bestsellers', 'running', 'training'],
   },
   {
     slug: 'phantom-flyknit',
@@ -129,14 +103,9 @@ const SHOES = [
     imageSrc: '/assets/phantom-flyknit.jpg',
     price: 18500,
     salePrice: 16000,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 100,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 100,
     numOfColors: 4,
-    categories: [
-      'running',
-      'training',
-      'lifestyle',
-    ],
+    categories: ['running', 'training', 'lifestyle'],
   },
   {
     slug: 'lebron',
@@ -144,8 +113,7 @@ const SHOES = [
     imageSrc: '/assets/lebron.jpg',
     price: 26000,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 120,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 120,
     numOfColors: 1,
     categories: ['basketball', 'skateboarding'],
   },
@@ -155,14 +123,9 @@ const SHOES = [
     imageSrc: '/assets/flyease.webp',
     price: 16500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 5,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 5,
     numOfColors: 2,
-    categories: [
-      'training',
-      'running',
-      'lifestyle',
-    ],
+    categories: ['training', 'running', 'lifestyle'],
   },
   {
     slug: 'air-jordan-low',
@@ -170,8 +133,7 @@ const SHOES = [
     imageSrc: '/assets/air-jordan-low.webp',
     price: 14500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 15,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 15,
     numOfColors: 1,
     categories: [
       'training',
@@ -186,14 +148,9 @@ const SHOES = [
     imageSrc: '/assets/air-jordan-mid.webp',
     price: 16500,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 15,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 15,
     numOfColors: 1,
-    categories: [
-      'training',
-      'lifestyle',
-      'basketball',
-    ],
+    categories: ['training', 'lifestyle', 'basketball'],
   },
   {
     slug: 'air-force-1-shadow',
@@ -201,29 +158,19 @@ const SHOES = [
     imageSrc: '/assets/air-force-1-shadow.webp',
     price: 17000,
     salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 2,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 2,
     numOfColors: 2,
-    categories: [
-      'bestsellers',
-      'running',
-      'skateboarding',
-    ],
+    categories: ['bestsellers', 'running', 'skateboarding'],
   },
   {
     slug: 'nike-free-metcon-5',
     name: 'Nike Free Metcon 5',
     imageSrc: '/assets/nike-free-metcon-5.webp',
     price: 16000,
-    salePrice: null,
-    releaseDate:
-      Date.now() - 1000 * 60 * 60 * 24 * 30,
+    salePrice: 15000,
+    releaseDate: Date.now() - 1000 * 60 * 60 * 24 * 30,
     numOfColors: 5,
-    categories: [
-      'lifestyle',
-      'running',
-      'training',
-    ],
+    categories: ['lifestyle', 'running', 'training'],
   },
 ];
 

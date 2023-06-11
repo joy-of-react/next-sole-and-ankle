@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start:local": "next start -p 4000"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
     "next": "^13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "swr": "^2.1.5"
   }
 }

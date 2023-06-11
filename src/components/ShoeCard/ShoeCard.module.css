@@ -15,6 +15,25 @@
   object-fit: cover;
 }
 
+@keyframes shimmer {
+  from {
+    opacity: 0.333;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fakeImage {
+  width: 100%;
+  border-radius: 16px 16px 4px 4px;
+  aspect-ratio: 400 / 275;
+  object-fit: cover;
+  background: #eee;
+  animation: shimmer 800ms infinite alternate
+    ease-in-out;
+}
+
 .row {
   font-size: 1rem;
   display: flex;

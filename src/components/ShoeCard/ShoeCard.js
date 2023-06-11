@@ -9,7 +9,7 @@ import {
 
 import styles from './ShoeCard.module.css';
 
-function ShoeCard({ shoe }) {
+function ShoeCard({ shoe, isPlaceholder }) {
   const {
     slug,
     name,
@@ -28,14 +28,26 @@ function ShoeCard({ shoe }) {
       : 'default';
 
   return (
-    <Link href="" className={styles.wrapper}>
+    <Link
+      href=""
+      className={styles.wrapper}
+      style={{
+        fontFamily: isPlaceholder
+          ? 'var(--font-family-loading)'
+          : undefined,
+      }}
+    >
       <article>
         <div className={styles.imageWrapper}>
-          <img
-            className={styles.image}
-            alt=""
-            src={imageSrc}
-          />
+          {isPlaceholder ? (
+            <div className={styles.fakeImage} />
+          ) : (
+            <img
+              className={styles.image}
+              alt=""
+              src={imageSrc}
+            />
+          )}
           {variant === 'on-sale' && (
             <div
               className={`${styles.flag} ${styles.sale}`}
