@@ -1,5 +1,5 @@
-## Next 13 template
+## Next 13 — Sole & Ankle
 
-This is a _super minimal_ starter for Next 13's App Router.
+In my CSS course, we create a sneaker store called [Sole&Ankle](https://github.com/css-for-js/sole-and-ankle). This project is a recreation of that UI, using Next, and exploring different approaches for handling data fetching.
 
-Not intended for use in production. Purely used for educational reasons.
+This is part of my React course [The Joy of React](https://joyofreact.com/).
