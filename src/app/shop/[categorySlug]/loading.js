@@ -2,8 +2,8 @@ import React from 'react';
 
 import ShoeGrid from '@/components/ShoeGrid';
 
-async function CategoryPage({ params }) {
+function CategoryLoading() {
   return <ShoeGrid isPlaceholder={true} />;
 }
 
-export default CategoryPage;
+export default CategoryLoading;
