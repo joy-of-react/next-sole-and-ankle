@@ -1,23 +1,12 @@
-'use client';
 import React from 'react';
-import useSWR from 'swr';
 
+import { getShoesForCategory } from '@/helpers/data';
 import ShoeGrid from '@/components/ShoeGrid';
 
-async function fetcher(endpoint) {
-  const response = await fetch(endpoint);
-  const json = await response.json();
+async function CategoryPage({ params }) {
+  const shoes = await getShoesForCategory(params.categorySlug);
 
-  return json.shoes;
-}
-
-function CategoryPage({ params }) {
-  const { data, isLoading } = useSWR(
-    `/api/shoes?categorySlug=${params.categorySlug}`,
-    fetcher
-  );
-
-  return <ShoeGrid isPlaceholder={isLoading} shoes={data} />;
+  return <ShoeGrid shoes={shoes} />;
 }
 
 export default CategoryPage;
