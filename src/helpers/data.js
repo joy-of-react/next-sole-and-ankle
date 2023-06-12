@@ -1,6 +1,6 @@
 // Simulated database request
 export async function getShoesForCategory(category) {
-  // await delay(2000);
+  await delay(2000);
 
   return SHOES.filter((shoe) =>
     shoe.categories.includes(category.toLowerCase())
