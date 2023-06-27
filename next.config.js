@@ -4,7 +4,7 @@ module.exports = {
       {
         source: '/',
         destination: '/shop/bestsellers',
-        permanent: true,
+        permanent: false,
       },
     ];
   },
