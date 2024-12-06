@@ -5,18 +5,17 @@ import CategorySidebar from '@/components/CategorySidebar';
 
 import styles from './CategoryLayout.module.css';
 
-function CategoryLayout({ params, children }) {
+async function CategoryLayout({ params, children }) {
+  const { categorySlug } = await params;
+
   const matchedCategory = CATEGORIES.find(
-    (category) =>
-      category.slug === params.categorySlug
+    (category) => category.slug === categorySlug
   );
 
   return (
     <main className={styles.wrapper}>
       <div className={styles.sidebarWrapper}>
-        <CategorySidebar
-          selectedCategory={params.categorySlug}
-        />
+        <CategorySidebar selectedCategory={categorySlug} />
       </div>
       <div className={styles.childWrapper}>
         <h2>{matchedCategory.label}</h2>
